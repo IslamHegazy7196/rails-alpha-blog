@@ -60,3 +60,29 @@ padding-bottom: 15px;
     border-top: 1px solid #eaeaea;
     padding-top: 5px;
 }
+.jumbotron{
+    background-image: asset-url('ruby-on-rails-development.jpg');
+    background-size: cover;
+    height:550px;
+}
+.jumbotron h1{
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+#btn-b{
+    color:rgb(186, 72, 72);
+}
+#btn-b:hover{
+    color:#fff;
+}
+.btn-home{
+    font-size: 1.7em;
+    background-color: black;
+    color:rgb(73, 13, 13);
+}
+.btn-home:hover{
+    background-color: rgb(65, 7, 7);
+}

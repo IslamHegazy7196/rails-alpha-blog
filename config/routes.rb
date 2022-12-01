@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get '/about' => 'welcome#about'
   resources :articles
+  resources :users,except: [:new]
+  get 'signup' => 'users#new'
+  post 'users', to:'users#create'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -35,8 +39,7 @@ Rails.application.routes.draw do
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
-  #     resources :comments
-  #     resources :sales do
+  #     #     resources :sales do
   #       get 'recent', on: :collection
   #     end
   #   end
