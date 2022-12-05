@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   post 'users', to:'users#create'
   resources :articles
   resources :users,except: [:new]
+  get '/login' => 'auths#new'
+  post '/login' => 'auths#create'
+  delete '/logout' => 'auths#destroy'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
