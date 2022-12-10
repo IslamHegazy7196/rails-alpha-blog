@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/login' => 'auths#new'
   post '/login' => 'auths#create'
   delete '/logout' => 'auths#destroy'
+  resources :categories, except: [:destroy]
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
